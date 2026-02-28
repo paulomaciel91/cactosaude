@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://lndbihqowbpeeanofgtj.supabase.co/storage/v1/object/public/logo_cacto/favicon_cactoai.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CactoVendas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        /* Default Primary: Green 600 (#16a34a) for better contrast than 500 */
+        --color-primary: 22 163 74;
+        /* Default Primary Dark: Green 700 (#15803d) */
+        --color-primary-dark: 21 128 61;
+        /* Default Primary Light: Green 400 (#4ade80) */
+        --color-primary-light: 74 222 128;
+
+        /* Default Secondary: Gray 900 (#111827) - Maintained as Brand Dark */
+        --color-secondary: 17 24 39;
+        /* Default Secondary Dark: Black (#000000) */
+        --color-secondary-dark: 0 0 0;
+      }
+
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes scaleIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+      .animate-fadeIn { animation: fadeIn 0.2s ease-out forwards; }
+      .animate-scaleIn { animation: scaleIn 0.2s ease-out forwards; }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: 'rgb(var(--color-primary) / <alpha-value>)',
+                dark: 'rgb(var(--color-primary-dark) / <alpha-value>)',
+                light: 'rgb(var(--color-primary-light) / <alpha-value>)',
+              },
+              secondary: {
+                DEFAULT: 'rgb(var(--color-secondary) / <alpha-value>)',
+                dark: 'rgb(var(--color-secondary-dark) / <alpha-value>)',
+              },
+              brand: {
+                dark: '#111827', // gray-900
+                DEFAULT: '#1f2937', // gray-800
+                light: '#374151', // gray-700
+              },
+              gray: {
+                50: '#f9fafb',
+                100: '#f3f4f6',
+                200: '#e5e7eb',
+                300: '#d1d5db',
+                400: '#9ca3af',
+                500: '#6b7280',
+                600: '#4b5563',
+                700: '#374151',
+                800: '#1f2937',
+                900: '#111827',
+              }
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.45.0",
+    "path": "https://esm.sh/path@^0.12.7",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "jspdf": "https://esm.sh/jspdf@^4.1.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0",
+    "mammoth": "https://esm.sh/mammoth@^1.11.0",
+    "docx": "https://esm.sh/docx@^9.5.1",
+    "pdfjs-dist": "https://esm.sh/pdfjs-dist@^5.4.624",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-100 font-sans antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

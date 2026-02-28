@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 210 35% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 35% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 35% 17%;
+
+    --primary: 158 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 35% 22%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 158 84% 39%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 158 84% 39%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 210 35% 17%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 158 84% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 35% 22%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 35% 22%;
+    --sidebar-ring: 158 84% 39%;
+
+    /* Custom colors for healthcare SaaS */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 217 91% 60%;
+    --info-foreground: 0 0% 100%;
+
+    /* Gradient tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(158 84% 39%), hsl(158 84% 50%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 20% 98%));
+
+    /* Shadow tokens */
+    --shadow-sm: 0 1px 2px 0 hsl(210 35% 17% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(210 35% 17% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(210 35% 17% / 0.1);
+
+    /* Transition tokens */
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 210 35% 12%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 35% 17%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 35% 17%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 158 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 35% 22%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 35% 22%;
+    --muted-foreground: 210 15% 60%;
+
+    --accent: 158 84% 39%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 35% 22%;
+    --input: 210 35% 22%;
+    --ring: 158 84% 39%;
+    
+    --sidebar-background: 210 35% 17%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 158 84% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 35% 22%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 35% 22%;
+    --sidebar-ring: 158 84% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide-x {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide-x::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Touch-friendly improvements */
+  @media (max-width: 768px) {
+    button, a, [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    input, select, textarea {
+      min-height: 44px;
+    }
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better focus visibility */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}

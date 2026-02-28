@@ -1,0 +1,5 @@
+{
+  "name": "CactoVendas Loja Virtual",
+  "description": "A multi-store web catalog for CactoVendas, allowing customers to browse products, manage a shopping cart, and finalize orders via WhatsApp. Each store is dynamically loaded based on a URL slug.",
+  "requestFramePermissions": []
+}
