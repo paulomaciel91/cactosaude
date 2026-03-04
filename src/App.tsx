@@ -111,9 +111,9 @@ const App = () => (
                     <AdminGuard>
                       <AdminProvider>
                         <SidebarProvider defaultOpen={false}>
-                          <div className="flex min-h-screen w-full bg-background">
+                          <div className="flex min-h-screen w-full overflow-x-hidden bg-background">
                             <AdminSidebar />
-                            <div className="flex flex-1 flex-col">
+                            <div className="flex min-w-0 flex-1 flex-col">
                               <AdminHeader />
                               <Routes>
                                 <Route path="/" element={<AdminDashboard />} />
@@ -142,9 +142,9 @@ const App = () => (
                 element={
                   <ProtectedRoute>
                     <SidebarProvider defaultOpen={false}>
-                      <div className="flex min-h-screen w-full bg-background">
+                      <div className="flex min-h-screen w-full overflow-x-hidden bg-background">
                         <AppSidebar />
-                        <div className="flex flex-1 flex-col">
+                        <div className="flex min-w-0 flex-1 flex-col">
                           <Header />
                           <Routes>
                             <Route path="" element={<Dashboard />} />

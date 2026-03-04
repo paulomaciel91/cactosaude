@@ -175,7 +175,7 @@ export function Header() {
           </span>
         </div>
 
-        <div className="flex flex-1 items-center justify-center px-1 sm:px-2 md:px-8 min-w-0">
+        <div className="hidden min-w-0 flex-1 items-center justify-center px-1 sm:flex sm:px-2 md:px-8">
           <div className="w-full max-w-xs sm:max-w-md md:max-w-2xl">
             <SearchBar
               placeholder="Buscar pacientes por nome ou CPF..."

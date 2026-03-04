@@ -133,7 +133,7 @@ export function AdminHeader() {
           </div>
         </div>
 
-        <div className="flex flex-1 items-center justify-center px-1 sm:px-2 md:px-4 lg:px-8 min-w-0">
+        <div className="hidden min-w-0 flex-1 items-center justify-center px-1 sm:flex sm:px-2 md:px-4 lg:px-8">
           <form onSubmit={handleSearch} className="relative w-full max-w-xs sm:max-w-md lg:max-w-xl">
             <Search className="absolute left-2 sm:left-3 top-1/2 h-3 w-3 sm:h-4 sm:w-4 -translate-y-1/2 text-muted-foreground z-10" />
             <Input
@@ -305,4 +305,3 @@ export function AdminHeader() {
 }
 
 export default AdminHeader;
-
